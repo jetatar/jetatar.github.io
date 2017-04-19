@@ -8,7 +8,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
 
    `module load rclone`
 
-2. TO Configure RClone run:
+2. To Configure RClone run:
 
    `rclone config`
 
