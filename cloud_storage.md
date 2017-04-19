@@ -20,11 +20,12 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    `rclone config`
    
    Answer the questions:
-   Q1: 
-   ```No remotes found - make a new one
+   Q1:
+   
+   `No remotes found - make a new one
       n) New remote
       s) Set configuration password
-      q) Quit config```
+      q) Quit config`
 
 ### Backup to Cloud from HPC
 
