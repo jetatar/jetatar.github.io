@@ -8,6 +8,10 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
 
    `module load rclone`
 
+2. TO Configure RClone run:
+
+   `rclone config`
+
 ### Backup to Cloud from HPC
 
 ### Retreiving Backup from Cloud to HPC
