@@ -3,11 +3,11 @@
 HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/) to **manually** transfer data between HPC and a number of `rclone` supported cloud data storage providers (i.e: Google Drive, Amazon S3, Dropbox etc).  
 
 ### RClone Configuration
-1. Login to the interactive node on HPC:
-
+1. Login to the interactive node on HPC
+   From your personal computer ssh to HPC:
    `ssh -X yourusername@hpc.oit.uci.edu`
-
-   `qrsh`
+   From the HPC login node connect to the interactive node:
+   `ssh -X compute-1-13`
 
 2. Load the RClone module:
 
