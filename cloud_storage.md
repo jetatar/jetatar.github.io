@@ -6,10 +6,10 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
 1. Login to the interactive node on HPC
 
    From your personal computer ssh to HPC:<BR>
-   `ssh -X yourusername@hpc.oit.uci.edu`
+   `ssh -X -Y yourusername@hpc.oit.uci.edu`
 
    From the HPC login node connect to the interactive node:<BR>   
-   `ssh -X compute-1-13`
+   `ssh -X -Y compute-1-13`
 
 2. Load the RClone module:
 
