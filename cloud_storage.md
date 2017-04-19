@@ -60,7 +60,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
       \ "swift"
    12 / Yandex Disk
       \ "yandex"
-   Storage>
+   Storage> 7
 ```
    
    
