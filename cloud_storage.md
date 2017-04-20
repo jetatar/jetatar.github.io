@@ -88,8 +88,9 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    ```
    If your browser doesn't open automatically go to the following link:<br>
       https://accounts.google.com/o/oauth2/authclient_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=250febf5c0532c7209789b54e032d2e5
-Log in and authorize rclone for access
-Enter verification code> 4/5qfmM5b2B1vgRzCeXUGdYNrMgRvrfF6ycTv2fpiaCME
+   
+   Log in and authorize rclone for access
+   Enter verification code> 4/5qfmM5b2B1vgRzCeXUGdYNrMgRvrfF6ycTv2fpiaCME
    ```
    After entering the verification code, you will see the rclone.config file configuration entry in $HOME/.config/rclone/:<br>
    ```
