@@ -83,13 +83,14 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    n) No
    y/n> n
    ```
-   If a browser doesn't automatically show up and ask you to login using your UCI account, use your favorite browser and enter go to the link that was generated and enter the verification code that is printed after you allow RClone to use your Google Drive account:
+
+   If a browser doesn't automatically show up and ask you to login using your UCI account, use your favorite browser and enter go to the link that was generated and enter the verification code that is printed after you allow RClone to use your Google Drive account:<br>
    ```
    If your browser doesn't open automatically go to the following link: https://accounts.google.com/o/oauth2/authclient_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=3203235a96b6c69143da28d4570c4df4
 Log in and authorize rclone for access
 Enter verification code> 4/5qfmM5b2B1vgRzCeXUGdYNrMgRvrfF6ycTv2fpiaCME
    ```
-   After entering the verification code, you will see the rclone.config file configuration entry in $HOME/.config/rclone/: 
+   After entering the verification code, you will see the rclone.config file configuration entry in $HOME/.config/rclone/:<br>
    ```
    --------------------
    [gDrive]
