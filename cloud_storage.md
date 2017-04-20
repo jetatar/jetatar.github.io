@@ -130,7 +130,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    ```
    [gDrive]
    ```
-You should now be able to access your Google Drive account through RClone.  If that is not, contact me for help.
+You should now be able to access your Google Drive account through RClone.  If that is not the case and you are out of ideas, contact me for help.
 
 ### Backup to Cloud from HPC
 
