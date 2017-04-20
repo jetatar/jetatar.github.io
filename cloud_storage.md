@@ -84,7 +84,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    y/n> n
    ```
 
-   If a browser doesn't automatically show up and ask you to login using your UCI account, use your favorite browser and enter go to the link that was generated and enter the verification code that is printed after you allow RClone to use your Google Drive account:<br>
+   Q7: If a browser doesn't automatically show up and ask you to login using your UCI account, use your favorite browser and enter go to the link that was generated and enter the verification code that is printed after you allow RClone to use your Google Drive account:<br>
    ```
    If your browser doesn't open automatically go to the following link:
       https://accounts.google.com/o/oauth2/authclient_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=250febf5c0532c7209789b54e032d2e5
@@ -92,7 +92,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    Log in and authorize rclone for access
    Enter verification code> 4/5qfmM5b2B1vgRzCeXUGdYNrMgRvrfF6ycTv2fpiaCME
    ```
-   After entering the verification code, you will see the rclone.config file configuration entry in $HOME/.config/rclone/:<br>
+   Q8: After entering the verification code, you will see the rclone.config file configuration entry in $HOME/.config/rclone/:<br>
    ```
    --------------------
    [gDrive]
@@ -105,21 +105,22 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    d) Delete this remote
    y/e/d> y
    ```
-
-Current remotes:
-
-Name                 Type
-====                 ====
-gDrive               drive
-
-e) Edit existing remote
-n) New remote
-d) Delete remote
-r) Rename remote
-c) Copy remote
-s) Set configuration password
-q) Quit config
-e/n/d/r/c/s/q> q   
+   Q9: Quit.
+   ```
+   Current remotes:
+   
+   Name                 Type
+   ====                 ====
+   gDrive               drive
+   e) Edit existing remote
+   n) New remote
+   d) Delete remote
+   r) Rename remote
+   c) Copy remote
+   s) Set configuration password
+   q) Quit config
+   e/n/d/r/c/s/q> q
+   ```
    
 ### Backup to Cloud from HPC
 
