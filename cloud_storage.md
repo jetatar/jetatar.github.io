@@ -98,14 +98,13 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    [gDrive]
    client_id =
    client_secret =
-   token = {"access_token":"ya29.GlsyBNeHGVXOwiKz4f5qu9R-IVVV7mgalSGVTK0v_snzHuKU3YpAs3D0An
-  KLbR5pkl_jqHqrNSA5l4regTfgHl7GWe7vpj5SPGLnKOvp_eEQ24GgrZdbSb9Flks","token_type":"Bearer","refresh_token":"1/_X4omasTIoXnO4k9SGcmri-S4XDTsBxA2MzxgrrxmYTU0nJZ3Os_N3lqzhyUqZo","expiry":"2017-04-19T16:15:32.557926381-07:00"}
-  --------------------
-  y) Yes this is OK
-  e) Edit this remote
-  d) Delete this remote
-  y/e/d> y
-  ```
+   token = {"access_token":"ya29.GlsyBNeHGVXOwiKz4f5qu9R-IVVV7mgalSGVTK0v_snzHuKU3YpAs3D0AKLbR5pkl_jqHqrNSA5l4regTfgHl7GWe7vpj5SPGLnKOvp_eEQ24GgrZdbSb9Flks","token_type":"Bearer","refresh_token":"1/_X4omasTIoXnO4k9SGcmri-S4XDTsBxA2MzxgrrxmYTU0nJZ3Os_N3lqzhyUqZo","expiry":"2017-04-19T16:15:32.557926381-07:00"}
+   --------------------
+   y) Yes this is OK
+   e) Edit this remote
+   d) Delete this remote
+   y/e/d> y
+   ```
 
 Current remotes:
 
