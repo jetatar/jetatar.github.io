@@ -121,6 +121,15 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
    q) Quit config
    e/n/d/r/c/s/q> q
    ```
+
+4. Verify that the configuration was written:
+   ```
+   grep gDrive /data/users/yourusername/.config/rclone/rclone.config
+   ```
+   should return:
+   ```
+   [gDrive]
+   ```
    
 ### Backup to Cloud from HPC
 
