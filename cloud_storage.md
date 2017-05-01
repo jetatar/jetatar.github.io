@@ -151,8 +151,8 @@ Copies the file *testfile.dat* to the Google Drive folder _fooism_.
 #### `rclone copy gDrive:fooism/testfile.dat /pub/YourHPClogin`
 Copies the file *testfile.dat* from Google Drive folder _fooism_ to your HPC `/pub` folder on HPC.
 
-#### `rclone sync ~/ gDrive:fooism`
-**Deletes or overwrites all content** of the Google Drive folder *fooism* that does not match the content of your home directory.
+#### `rclone sync ~/ gDrive:fooism --drive-use-trash`
+**Deletes or overwrites all content** of the Google Drive folder *fooism* that does not match the content of your home directory.  Make sure that the destination directory (in this case *fooism*) is not being written to by other sources since those files will be deleted or overwritten by the sync.  When doing manual backups it is strongly encouraged the sync option `--drive-use-trash` is always used.  The are sent to the Google Drive trash folder, for a certain period of time, before being deleted permanently.  That allows for some file recovery, in case a sync deletes needed files.
 
 ## Coming Soon:
 
