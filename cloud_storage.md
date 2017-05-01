@@ -137,7 +137,13 @@ You should now be able to access your Google Drive account through RClone.  If t
 The Google Drive alias name we created in the above RClone configuration is ```gDrive```.  We will reference it throughout this section.  Note: All RClone commands begin with `rclone`, ie:
 
 #### `rclone ls gDrive:` 
+Lists all of your Google Drive files.
 
+#### `rclone lsd gDrive:` 
+Lists all of your top level Google Drive directories.  Analogous to `ls -d */` in Linux.
+
+#### `rclone mkdir gDrive:fooism` 
+Creates a directory in your Google Drive 'home' directory called _fooism_.
 
 ## Coming Soon:
 
