@@ -134,7 +134,10 @@ You should now be able to access your Google Drive account through RClone.  If t
 
 ### RClone Short Command Tutorial and Examples
 
-The Google Drive alias name we created in the above RClone configuration is ```gDrive```.
+The Google Drive alias name we created in the above RClone configuration is ```gDrive```.  We will reference it throughout this section.  Note: All RClone commands begin with `rclone`, ie:
+
+#### `rclone ls gDrive:` 
+
 
 ## Coming Soon:
 
