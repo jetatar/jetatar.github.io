@@ -149,7 +149,10 @@ Creates a directory in your Google Drive 'home' directory called _fooism_.
 Copies the file *testfile.dat* to the Google Drive folder _fooism_.
 
 #### `rclone copy gDrive:fooism/testfile.dat /pub/YourHPClogin`
-Copies the file *testfile.dat* from Google Drive folder _tooism_ to your HPC `/pub` folder on HPC.
+Copies the file *testfile.dat* from Google Drive folder _fooism_ to your HPC `/pub` folder on HPC.
+
+#### `rclone sync ~/ gDrive:fooism`
+**Deletes or overwrites all content** of the Google Drive folder *fooism* that does not match the content of your home directory.
 
 ## Coming Soon:
 
