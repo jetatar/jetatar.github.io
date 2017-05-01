@@ -145,6 +145,12 @@ Lists all of your top level Google Drive directories.  Analogous to `ls -d */` i
 #### `rclone mkdir gDrive:fooism` 
 Creates a directory in your Google Drive 'home' directory called _fooism_.
 
+#### `rclone copy testfile.dat gDrive:fooism` 
+Copies the file *testfile.dat* to the Google Drive folder _fooism_.
+
+#### `rclone copy gDrive:fooism/testfile.dat /pub/YourHPClogin`
+Copies the file *testfile.dat* from Google Drive folder _tooism_ to your HPC `/pub` folder on HPC.
+
 ## Coming Soon:
 
 ### Backup to Cloud from HPC
