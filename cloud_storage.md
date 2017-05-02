@@ -159,15 +159,27 @@ The biggest issue with doing manual backups yourself is the time it takes for th
 ```
 # Backup all of your /pub/yourHPCLogin
 setsid rclone copy -vv --include-from pubDirFilesToSave.txt --exclude-from filesToExclude.txt \
-   /pub/yourHPCLogin gDrive:hpc_backup --dump-filters --log-file /pub/jtatar/Work/CloudBackup/hpc_cloud_backup.log \
+   /pub/yourHPCLogin gDrive:uci_hpc_pubdir_backup --dump-filters --log-file ~/hpc_pubdir_cloud_backup.log \
    --transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 
 # Backup all of your /data/users/yourHPCLogin
 setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from filesToExclude.txt \
-   /pub/yourHPCLogin gDrive:hpc_backup --dump-filters --log-file /pub/jtatar/Work/CloudBackup/hpc_cloud_backup.log \
+   /pub/yourHPCLogin gDrive:uci_hpc_homedir_backup --dump-filters --log-file ~/hpc_homedir_cloud_backup.log \
    --transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 ```
+`setsid` - makes sure rclone runs even if HPC connection lost
+`homeDirFilesToSave.txt` - list of files or patterns (globs)
+   `homeDirFilesToSave.txt example that saves everything in my /pub/jtatar dir:
+      **
 
+   `
+Create Google Drive backup directories:
+`
+module purge
+module load rclone
+rclone mkdir gDrive:uci_hpc_pubdir_backup
+rclone mkdir gDrive:uci_hpc_homedir_backup
+`
 
 ## Coming Soon:
 
