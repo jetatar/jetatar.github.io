@@ -202,7 +202,7 @@ Similarly if you are only interested in sub-folder(s) of */data/users/yourHPCLog
 
 ```
 MCOutput/**
-*.dat
+/*.dat
 ```
 
 ## Coming Soon:
