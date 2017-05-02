@@ -155,7 +155,12 @@ Copies the file *testfile.dat* from Google Drive folder _fooism_ to your HPC `/p
 **Deletes or overwrites all content** of the Google Drive folder *fooism* that does not match the content of your home directory.  Make sure that the destination directory (in this case *fooism*) is not being written to by other sources since those files will be deleted or overwritten by the sync.  When doing manual backups it is strongly encouraged the sync option `--drive-use-trash` is always used.  The are sent to the Google Drive trash folder, for a certain period of time, before being deleted permanently.  That allows for some file recovery, in case a sync deletes needed files.
 
 ### Quick Manual Cloud Backup
-** You must do what follows on the interactive node on HPC ONLY. **
+
+** You must be on the interactive node to do manual cloud backups. **
+
+First check that there are no other rclone instances you are running:
+`ps aux | grep rclone`
+If there are, backup is still running.  Check the log files to see the state of the backup.  To kill the backup execute `kill -9 [PID]`, where `[PID]` is the process ID of the rclone session you have been running. 
 
 Create Google Drive backup directories (one to save everything in from your /pub/yourHPCLogin and /data/users/yourHPCLogin:
 `
