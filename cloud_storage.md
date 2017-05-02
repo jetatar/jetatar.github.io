@@ -211,6 +211,9 @@ MCOutput/**
 core.*
 ```
 
+*hpc_homedir_cloud_backup.log* and *hpc_pubdir_cloud_backup.log* are log files that will contain rclone's progress.  Any errors will also be logged there.
+
+`*--transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k*` are settings optimized for large file transfers.  There is no need to change the settings for smaller file transfers.
 
 ## Coming Soon:
 
