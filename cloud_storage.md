@@ -189,7 +189,21 @@ setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from file
       /**
    `
 
-Yes, `/**` is that is needed in pub(home)DirFilesToSave.txt if you want to save everything in your */pub* folder.
+Yes, `/**` is that is needed in pub(home)DirFilesToSave.txt if you want to save everything in your */pub* and */data/users* folder.
+
+If you are only interested in sub-folder(s) of */pub/yourHPCLogin* such as */pub/yourHPCLogin/Work* and */pub/yourHPCLogin/UHEMuons*, include the following lines, in **decending** order to importance in your pubDirFilesToSave.txt:
+
+`
+Work/**
+UHEMuons/**
+`
+
+Similarly if you are only interested in sub-folder(s) of */data/users/yourHPCLogin* such as */data/users/yourHPCLogin/MCOutput* and all .dat files in */data/users/yourHPCLogin* you would include the following lines in your *homeDirFilesToSave.txt*:
+
+`
+MCOutput/**
+*.dat
+`
 
 ## Coming Soon:
 
