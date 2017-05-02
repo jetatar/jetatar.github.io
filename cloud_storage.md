@@ -205,6 +205,13 @@ MCOutput/**
 /*.dat
 ```
 
+*filesToExclude.txt* should contain rules or specific files to be excluded.  For example, if you do not want emacs backup files ending in *~* or core dumps, your *filesToExclude.txt* will contain:
+```
+*~
+core.*
+```
+
+
 ## Coming Soon:
 
 ### Backup to Cloud from HPC
