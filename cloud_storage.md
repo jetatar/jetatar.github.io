@@ -195,7 +195,6 @@ If you are only interested in sub-folder(s) of */pub/yourHPCLogin* such as */pub
 
 `
 Work/**
-
 UHEMuons/**
 `
 
@@ -203,7 +202,6 @@ Similarly if you are only interested in sub-folder(s) of */data/users/yourHPCLog
 
 `
 MCOutput/**
-
 *.dat
 `
 
