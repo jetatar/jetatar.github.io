@@ -170,10 +170,10 @@ setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from file
 `setsid` - makes sure rclone runs even if HPC connection lost
 `homeDirFilesToSave.txt` - list of files or patterns (globs)
    `homeDirFilesToSave.txt example that saves everything in my /pub/jtatar dir:
-      **
+      /**
 
    `
-Create Google Drive backup directories:
+Create Google Drive backup directories (one to save everything in from your /pub/yourHPCLogin and /data/users/yourHPCLogin:
 `
 module purge
 module load rclone
