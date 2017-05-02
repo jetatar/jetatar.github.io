@@ -177,17 +177,19 @@ setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from file
 `setsid` - makes sure rclone runs even if HPC connection lost
 `pub[home]DirFilesToSave.txt` - list of files or patterns (globs)
 
-   `pubDirFilesToSave.txt example that saves everything in your /pub/yourHPCLogin dir:
-   
+*pubDirFilesToSave.txt* example that saves everything in your /pub/yourHPCLogin dir:
+
+   `   
       /**
    `
 
-   `homeDirFilesToSave.txt example to save everything in my /data/users/yourHPCLogin dir:
-   
+*homeDirFilesToSave.txt* example to save everything in my /data/users/yourHPCLogin dir:
+
+   `
       /**
    `
 
-Yes, `/**` is that is needed in pubDirFilesToSave.txt if you want to save everything in your */pub* folder.
+Yes, `/**` is that is needed in pub(home)DirFilesToSave.txt if you want to save everything in your */pub* folder.
 
 ## Coming Soon:
 
