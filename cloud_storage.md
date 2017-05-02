@@ -194,17 +194,17 @@ Yes, `/**` is that is needed in pub(home)DirFilesToSave.txt if you want to save 
 If you are only interested in sub-folder(s) of */pub/yourHPCLogin* such as */pub/yourHPCLogin/Work* and */pub/yourHPCLogin/UHEMuons*, include the following lines, in **decending** order to importance in your pubDirFilesToSave.txt:
 
 `
-   Work/**
+Work/**
 
-   UHEMuons/**
+UHEMuons/**
 `
 
 Similarly if you are only interested in sub-folder(s) of */data/users/yourHPCLogin* such as */data/users/yourHPCLogin/MCOutput* and all .dat files in */data/users/yourHPCLogin* you would include the following lines in your *homeDirFilesToSave.txt*:
 
 `
-   MCOutput/**
+MCOutput/**
 
-   *.dat
+*.dat
 `
 
 ## Coming Soon:
