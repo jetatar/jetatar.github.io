@@ -178,10 +178,12 @@ setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from file
 `pub[home]DirFilesToSave.txt` - list of files or patterns (globs)
 
    `pubDirFilesToSave.txt example that saves everything in your /pub/yourHPCLogin dir:
+   
       /**
    `
 
    `homeDirFilesToSave.txt example to save everything in my /data/users/yourHPCLogin dir:
+   
       /**
    `
 
