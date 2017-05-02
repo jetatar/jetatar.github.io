@@ -171,15 +171,21 @@ setsid rclone copy -vv --include-from pubDirFilesToSave.txt --exclude-from files
 
 # Backup all of your /data/users/yourHPCLogin
 setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from filesToExclude.txt \
-   /pub/yourHPCLogin gDrive:uci_hpc_homedir_backup --dump-filters --log-file ~/hpc_homedir_cloud_backup.log \
+   /data/users/yourHPCLogin gDrive:uci_hpc_homedir_backup --dump-filters --log-file ~/hpc_homedir_cloud_backup.log \
    --transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 ```
 `setsid` - makes sure rclone runs even if HPC connection lost
 `pub[home]DirFilesToSave.txt` - list of files or patterns (globs)
-   `pubDirFilesToSave.txt example that saves everything in my /pub/jtatar dir:
+
+   `pubDirFilesToSave.txt example that saves everything in your /pub/yourHPCLogin dir:
       /**
    `
-Yes `/**` is it.
+
+   `homeDirFilesToSave.txt example to save everything in my /data/users/yourHPCLogin dir:
+      /**
+   `
+
+Yes, `/**` is that is needed in pubDirFilesToSave.txt if you want to save everything in your */pub* folder.
 
 ## Coming Soon:
 
