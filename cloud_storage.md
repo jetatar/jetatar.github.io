@@ -179,15 +179,15 @@ setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from file
 
 *pubDirFilesToSave.txt* example that saves everything in your /pub/yourHPCLogin dir:
 
-   `   
+   ```   
       /**
-   `
+   ```
 
 *homeDirFilesToSave.txt* example to save everything in my /data/users/yourHPCLogin dir:
 
-   `
+   ```
       /**
-   `
+   ```
 
 Yes, `/**` is that is needed in pub(home)DirFilesToSave.txt if you want to save everything in your */pub* and */data/users* folder.
 
