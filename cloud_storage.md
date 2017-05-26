@@ -289,7 +289,7 @@ rm /data/users/jtatar/.hpc_cloud_backup/cloudbackup.pid
 
 
 
-# Coming Soon
+# Coming Soon ...
 
 ### Retreiving Backup from Cloud to HPC
 
