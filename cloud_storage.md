@@ -226,26 +226,52 @@ core.*
 
 After configuring RClone as described in the "RClone Configuration" section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**.
 
-1.  Create .hpc_cloud_backup dir:
-`cd /data/users/yourHPCLogin`
-`mkdir .hpc_cloud_backup`
-
+1.  Create *.hpc_cloud_backup* dir:
+```
+cd /data/users/yourHPCLogin`
+mkdir .hpc_cloud_backup`
+```
 2.  Decide on the files and dirs you want to backup:
-`cd .hpc_cloud_backup`
-`vim/emacs/nano backup`
+```
+cd .hpc_cloud_backup`
+vim/emacs/nano backup`
+```
 
 3.  Decide on files and dirs you want to **exclude** from backup:
-`vim/emacs/nano exclude`
+```
+vim/emacs/nano exclude`
+```
 
 Now you are ready to start backing up by executing (**on interactive node only**):
-`cloudBackup.py`
+```
+cloudBackup.py
+```
+
+Check that *cloudBackup.py* is running:
+```
+ps x | grep cloudBackup.py
+```
+
+There are a number of options that you can specify or accept the defaults.  To see what the defaults are, type:
+```
+cloudBackup.py -h
+```
+
+Note: Setting *dt* to 0 will running the backup once and exit.  To do so execute:
+```
+cloudBackup.py -dt 0
+```
 
 There are a number of log files to pay attention to:
-`/data/users/yourUCILogin/.hpc_cloud_backup/logs/cloudbackup.log`
+*/data/users/yourUCILogin/.hpc_cloud_backup/logs/cloudbackup.log*
+*/data/users/jtatar/.hpc_cloud_backup/logs/sessions/RCloneCmdLine_{#}.log*
 
-There are a number of options that you can specify or accept the defaults.  To see what the defaults are, type `cloudBackup.py -h`.
+**Before** starting *cloudBackup.py* make sure there is no pid file from a previous backup session that did not exit gracefully.  If there is, remove it:
+```
+rm /data/users/jtatar/.hpc_cloud_backup/cloudbackup.pid
+```
 
-
+**NOTE**:  Make sure you have read/write permissions of **all directories** you are trying to backup.  If *cloudBackup.py* tries to backup a directory you have no proper permissions for, it will exit.
 
 
 ### Retreiving Backup from Cloud to HPC
