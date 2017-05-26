@@ -236,10 +236,24 @@ mkdir .hpc_cloud_backup`
 cd .hpc_cloud_backup`
 vim/emacs/nano backup`
 ```
-
-3.  Decide on files and dirs you want to **exclude** from backup:
+Example: to backup your entire home directory and all of put add the following two lines to the file *backup*:
 ```
-vim/emacs/nano exclude`
+/data/users/yourUCILogin
+/pub/yourUCILogin
+```
+
+3.  Decide on files and dirs you want to **exclude** from backup.  In */data/users/yourUCILogin/.hpc_cloud_backup* do:
+```
+vim/emacs/nano exclude
+```
+Example: you may want to exclude all hidden files (ones that start with `.`) from being backuped up, since they frequently contain tockens and passwords include the following line in the file *exclude*:
+```
+.*
+```
+To also exclude all files in directories starting with `.` add the following line to *exclude*:
+```
+.*
+.*/**
 ```
 
 Now you are ready to start backing up by executing (**on interactive node only**):
