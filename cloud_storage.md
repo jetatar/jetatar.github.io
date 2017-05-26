@@ -224,7 +224,7 @@ core.*
 
 ### Automatic Backups to Google Drive from HPC
 
-After configuring RClone as described in the [RClone Configuration][#RClone-Configuration] section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**.
+After configuring RClone as described in the [RClone Configuration][#rclone-configuration] section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**.
 
 1.  Create *.hpc_cloud_backup* dir:
 ```
