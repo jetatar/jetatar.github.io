@@ -222,9 +222,31 @@ core.*
 
 *`--transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k`* are settings optimized for large file transfers.  There is no need to change the settings for smaller file transfers.
 
-## Coming Soon:
+### Automatic Backups to Google Drive from HPC
 
-### Backup to Cloud from HPC
+After configuring RClone as described in the "RClone Configuration" section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**.
+
+1.  Create .hpc_cloud_backup dir:
+`cd /data/users/yourHPCLogin`
+`mkdir .hpc_cloud_backup`
+
+2.  Decide on the files and dirs you want to backup:
+`cd .hpc_cloud_backup`
+`vim/emacs/nano backup`
+
+3.  Decide on files and dirs you want to **exclude** from backup:
+`vim/emacs/nano exclude`
+
+Now you are ready to start backing up by executing (**on interactive node only**):
+`cloudBackup.py`
+
+There are a number of log files to pay attention to:
+`/data/users/yourUCILogin/.hpc_cloud_backup/logs/cloudbackup.log`
+
+There are a number of options that you can specify or accept the defaults.  To see what the defaults are, type `cloudBackup.py -h`.
+
+
+
 
 ### Retreiving Backup from Cloud to HPC
 
