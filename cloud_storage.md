@@ -288,6 +288,9 @@ rm /data/users/jtatar/.hpc_cloud_backup/cloudbackup.pid
 **NOTE**:  Make sure you have read/write permissions of **all directories** you are trying to backup.  If *cloudBackup.py* tries to backup a directory you have no proper permissions for, it will exit.
 
 
+
+# Coming Soon
+
 ### Retreiving Backup from Cloud to HPC
 
 ### Archival Storage
