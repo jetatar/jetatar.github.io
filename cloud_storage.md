@@ -268,6 +268,24 @@ To also exclude all files in directories starting with `.` add the following lin
 .*/**
 ```
 
+4.  Decide how often to do backups.  Create a short configuration file in */data/users/yourUCILogin/.hpc_cloud_backup*:
+```
+vim[/emacs/nano] config
+```
+At the top of the file specify the name of the RClone configuration you are referring to ```gDrive``` in square brackets as follows:
+```
+[gDrive]
+```
+Finally, set the option ```dt``` (delta time) to the number of **minutes** between backups.  For example ```dt = 60``` will cause the backup to sleep for 60 minutes, after the initial backup, and every backup thereafter.
+
+**Note:** setting ```dt = 0``` will only run the cloud backup once and exit when it finishes.
+
+To summarize, your */data/users/yourUCILogin/.hpc_cloud_backup/config* file should look similar to the following:
+```
+[gDrive]
+dt = 0
+```
+
 Now you are ready to start backing up by executing (**on interactive node only**):
 ```
 cloudBackup.py
@@ -283,7 +301,7 @@ There are a number of options that you can specify or accept the defaults.  To s
 cloudBackup.py -h
 ```
 
-Note: Setting *dt* to 0 will running the backup once and exit.  To do so execute:
+Note: Setting *dt* to 0 will run the backup once and exit.  To do so execute:
 ```
 cloudBackup.py -dt 0
 ```
