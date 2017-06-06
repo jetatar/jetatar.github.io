@@ -126,7 +126,7 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
 
 4. Verify that the configuration was written:
    ```
-   grep gDrive /data/users/yourusername/.config/rclone/rclone.config
+   grep gDrive $HOME/.config/rclone/rclone.config
    ```
    should return:
    ```
