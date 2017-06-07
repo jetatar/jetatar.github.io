@@ -226,8 +226,17 @@ core.*
 
 ### Automatic Backups to Google Drive from HPC
 
-After configuring RClone as described in the [RClone Configuration](#rclone-configuration) section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**.
+After configuring RClone as described in the [RClone Configuration](#rclone-configuration) section above, you need to follow the steps outlined below in order to set up automatic Google Drive backups from the **interactive** node (compute-1-13) **only**, if you plan to run it on HPC.
 
+1.  Check if cloudBackup is installed locally.  Try:
+```
+which cloudBackup.py
+```
+If it is installed, you should see something like:
+```
+/usr/bin/cloudBackup.py
+```
+If it is not installed on your system [download Cloud Backup](https://github.com/jetatar/CloudBackup).  Then follow the instruction outlined on the README page of the repository.
 
 0.  Use python v2.7 or higher:
 ```
