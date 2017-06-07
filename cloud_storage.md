@@ -236,9 +236,10 @@ If it is installed, you should see something like:
 ```
 /usr/bin/cloudBackup.py
 ```
-If it is not installed on your system or you would like to run the latest version, [download Cloud Backup](https://github.com/jetatar/CloudBackup).  
+If it is not installed on your system or you would like to run the latest version, [download Cloud Backup](https://github.com/jetatar/CloudBackup).
 
-0.  Use python v2.7 or higher:
+
+2.  Use python v2.7 or higher:
 On HPC:
 ```
 module load enthought_python/7.3.2
@@ -253,11 +254,11 @@ On Green Planet:
 module load python/2.7.9
 ```
 
-1.  Create *.hpc_cloud_backup* dir:
+3.  Create *.hpc_cloud_backup* dir:
 ```
 mkdir $HOME/.hpc_cloud_backup
 ```
-2.  Decide on the files and dirs you want to backup:
+4.  Decide on the files and dirs you want to backup:
 ```
 vim $HOME/.hpc_cloud_backup/backup
 ```
@@ -271,7 +272,7 @@ On Green Planet to backup your entire home directory add the following line to t
 /home/yourGPLogin
 ```
 
-3.  Decide on files and dirs you want to **exclude** from backup:
+5.  Decide on files and dirs you want to **exclude** from backup:
 ```
 vim $HOME/.hpc_cloud_backup/exclude
 ```
@@ -285,7 +286,7 @@ To also exclude all files in directories starting with `.` add the following lin
 .*/**
 ```
 
-4.  Decide how often to do backups.  Create a short configuration file in *$HOME/.hpc_cloud_backup*:
+6.  Decide how often to do backups.  Create a short configuration file in *$HOME/.hpc_cloud_backup*:
 ```
 vim $HOME/.hpc_cloud_backup/config
 ```
@@ -297,13 +298,13 @@ Finally, set the option ```dt``` (delta time) to the number of **minutes** betwe
 
 **Note:** setting ```dt = 0``` will only run the cloud backup once and exit when it finishes.
 
-To summarize, your */data/users/yourUCILogin/.hpc_cloud_backup/config* file should look similar to the following:
+To summarize, your *$HOME/.hpc_cloud_backup/config* file should look similar to the following:
 ```
 [gDrive]
 dt = 0
 ```
 
-Now you are ready to start backing up by executing (**on interactive node only**):
+7.  Now you are ready to start backing up by executing (**HPC users interactive node only**):
 ```
 cloudBackup.py
 ```
