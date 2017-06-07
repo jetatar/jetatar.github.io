@@ -255,23 +255,25 @@ module load python/2.7.9
 
 1.  Create *.hpc_cloud_backup* dir:
 ```
-cd /data/users/yourHPCLogin
-mkdir .hpc_cloud_backup
+mkdir $HOME/.hpc_cloud_backup
 ```
 2.  Decide on the files and dirs you want to backup:
 ```
-cd .hpc_cloud_backup
-vim/emacs/nano backup
+vim $HOME/.hpc_cloud_backup/backup
 ```
-Example: to backup your entire home directory and all of put add the following two lines to the file *backup*:
+HPC Example: to backup your entire home directory and all of your `pub` dir add the following two lines to the file *backup*:
 ```
 /data/users/yourUCILogin
 /pub/yourUCILogin
 ```
-
-3.  Decide on files and dirs you want to **exclude** from backup.  In */data/users/yourUCILogin/.hpc_cloud_backup* do:
+On Green Planet to backup your entire home directory add the following line to the file *backup*:
 ```
-vim/emacs/nano exclude
+/home/yourGPLogin
+```
+
+3.  Decide on files and dirs you want to **exclude** from backup:
+```
+vim $HOME/.hpc_cloud_backup/exclude
 ```
 Example: you may want to exclude all hidden files (ones that start with `.`) from being backuped up, since they frequently contain tockens and passwords include the following line in the file *exclude*:
 ```
@@ -283,9 +285,9 @@ To also exclude all files in directories starting with `.` add the following lin
 .*/**
 ```
 
-4.  Decide how often to do backups.  Create a short configuration file in */data/users/yourUCILogin/.hpc_cloud_backup*:
+4.  Decide how often to do backups.  Create a short configuration file in *$HOME/.hpc_cloud_backup*:
 ```
-vim[/emacs/nano] config
+vim $HOME/.hpc_cloud_backup/config
 ```
 At the top of the file specify the name of the RClone configuration you are referring to ```gDrive``` in square brackets as follows:
 ```
