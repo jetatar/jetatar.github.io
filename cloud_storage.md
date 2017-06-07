@@ -236,7 +236,7 @@ If it is installed, you should see something like:
 ```
 /usr/bin/cloudBackup.py
 ```
-If it is not installed on your system [download Cloud Backup](https://github.com/jetatar/CloudBackup).  Then follow the instruction outlined on the README page of the repository.
+If it is not installed on your system, [download Cloud Backup](https://github.com/jetatar/CloudBackup).  Then follow the instruction outlined in the README page there.
 
 0.  Use python v2.7 or higher:
 ```
