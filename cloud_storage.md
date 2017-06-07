@@ -304,7 +304,7 @@ To summarize, your *$HOME/.hpc_cloud_backup/config* file should look similar to 
 dt = 0
 ```
 
-7.  Now you are ready to start backing up by executing (**HPC users interactive node only**):
+7.  Now you are ready to start backing up by executing:
 ```
 cloudBackup.py
 ```
