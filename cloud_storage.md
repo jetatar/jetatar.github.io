@@ -239,6 +239,7 @@ If it is installed, you should see something like:
 If it is not installed on your system or you would like to run the latest version, [download Cloud Backup](https://github.com/jetatar/CloudBackup).  
 
 0.  Use python v2.7 or higher:
+On HPC:
 ```
 module load enthought_python/7.3.2
 ```
@@ -247,15 +248,20 @@ or
 module load anaconda
 ```
 
+On Green Planet:
+```
+module load python/2.7.9
+```
+
 1.  Create *.hpc_cloud_backup* dir:
 ```
-cd /data/users/yourHPCLogin`
-mkdir .hpc_cloud_backup`
+cd /data/users/yourHPCLogin
+mkdir .hpc_cloud_backup
 ```
 2.  Decide on the files and dirs you want to backup:
 ```
-cd .hpc_cloud_backup`
-vim/emacs/nano backup`
+cd .hpc_cloud_backup
+vim/emacs/nano backup
 ```
 Example: to backup your entire home directory and all of put add the following two lines to the file *backup*:
 ```
