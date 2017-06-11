@@ -17,6 +17,9 @@ HPC users at UCI can use an open source app named [`rclone`](https://rclone.org/
 
    `module load rclone`
 
+RClone is currently not installed on Green Planet.  Please [install RClone](https://rclone.org/) before you continuing with the steps below.
+
+
 3. To Configure RClone interactively run:
 
    `rclone config`
