@@ -243,6 +243,7 @@ If it is not installed on your system or you would like to run the latest versio
 
 
 2.  Use python v2.7 or higher:
+
 On HPC:
 ```
 module load enthought_python/7.3.2
