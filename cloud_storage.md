@@ -294,19 +294,28 @@ At the top of the file specify the name of the RClone configuration you are refe
 ```
 [gDrive]
 ```
-Finally, set the option ```dt``` (delta time) to the number of **minutes** between backups.  For example ```dt = 60``` will cause the backup to sleep for 60 minutes, after the initial backup, and every backup thereafter.
+Set the option ```dt``` (delta time) to the number of **minutes** between backups.  For example ```dt = 60``` will cause the backup to sleep for 60 minutes, after the initial backup, and every backup thereafter.
 
 **Note:** setting ```dt = 0``` will only run the cloud backup once and exit when it finishes.
+
+Make sure you have RClone installed.  Try: ```which rclone```.  If no path is returned, [download and install RClone](https://rclone.org/).  Then specify the path to the rclone executible in the config file by assigning the path to the variable ```rc_exe_path = path to your RClone executible install```.
 
 To summarize, your *$HOME/.hpc_cloud_backup/config* file should look similar to the following:
 ```
 [gDrive]
-dt = 0
+dt = 60
+rc_exe_path = /usr/bin/rclone
 ```
 
 7.  Now you are ready to start backing up by executing:
+On HPC:
 ```
 cloudBackup.py
+```
+
+On Green Planet:
+```
+python cloudBackup.py
 ```
 
 Check that *cloudBackup.py* is running:
