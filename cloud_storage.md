@@ -279,6 +279,10 @@ On Green Planet to backup your entire home directory add the following line to t
 ```
 /home/yourGPLogin
 ```
+or
+```
+/export/home/yourGPLogin
+```
 
 5.  Decide on files and dirs you want to **exclude** from backup:
 ```
