@@ -325,22 +325,26 @@ ps x | grep cloudBackup.py
 ```
 
 There are a number of options that you can specify or accept the defaults.  To see what the defaults are, type:
+
+On HPC:
+
 ```
 cloudBackup.py -h
 ```
 
-Note: Setting *dt* to 0 will run the backup once and exit.  To do so execute:
+On Green Planet:
+
 ```
-cloudBackup.py -dt 0
+python cloudBackup.py -h
 ```
 
 There are a number of log files to pay attention to:
-*/data/users/yourUCILogin/.hpc_cloud_backup/logs/cloudbackup.log*
-*/data/users/yourUCILogin/.hpc_cloud_backup/logs/sessions/RCloneCmdLine_{#}.log*
+*$HOME/.hpc_cloud_backup/logs/cloudbackup.log*
+*$HOME/.hpc_cloud_backup/logs/sessions/RCloneCmdLine_{#}.log*
 
 **Before** starting *cloudBackup.py* make sure there is no pid file from a previous backup session that did not exit gracefully.  If there is, remove it:
 ```
-rm /data/users/yourUCILogin/.hpc_cloud_backup/cloudbackup.pid
+rm $HOME/.hpc_cloud_backup/cloudbackup.pid
 ```
 
 **NOTE**:  Make sure you have read/write permissions of **all directories** you are trying to backup.  If *cloudBackup.py* tries to backup a directory you have no proper permissions for, it will exit.
