@@ -257,6 +257,11 @@ On Green Planet:
 module load python/2.7.9
 ```
 
+On Green Planet you will also need to install two python modules:
+```
+pip install psutil python-daemon --user
+```
+
 3.  Create *.hpc_cloud_backup* dir:
 ```
 mkdir $HOME/.hpc_cloud_backup
@@ -309,6 +314,8 @@ To summarize, your *$HOME/.hpc_cloud_backup/config* file should look similar to 
 dt = 60
 rc_exe_path = /usr/bin/rclone
 ```
+
+For more examples on the `config`, `backup`, and `exclude` files, see the example templates.
 
 7.  Now you are ready to start backing up by executing:
 
