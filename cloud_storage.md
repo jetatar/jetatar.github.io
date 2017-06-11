@@ -315,7 +315,7 @@ dt = 60
 rc_exe_path = /usr/bin/rclone
 ```
 
-For more examples on the `config`, `backup`, and `exclude` files, see the example templates.
+For more examples on the `config`, `backup`, and `exclude` files, see [these examples](https://github.com/jetatar/CloudBackup/tree/master/templates).
 
 7.  Now you are ready to start backing up by executing:
 
