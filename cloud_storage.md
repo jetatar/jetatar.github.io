@@ -178,15 +178,21 @@ The biggest issue with doing manual backups yourself is the time it takes for th
 
 # Backup all of your /pub/yourHPCLogin
 ```
-setsid rclone copy -vv --include-from pubDirFilesToSave.txt --exclude-from filesToExclude.txt \
-   /pub/yourHPCLogin gDrive:uci_hpc_pubdir_backup --dump-filters --log-file ~/hpc_pubdir_cloud_backup.log \
-   --transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
+setsid rclone copy -vv --include-from pubDirFilesToSave.txt \
+   --exclude-from filesToExclude.txt \
+   /pub/yourHPCLogin gDrive:uci_hpc_pubdir_backup \
+   --dump-filters --log-file ~/hpc_pubdir_cloud_backup.log \
+   --transfers=32 --checkers=16 --drive-chunk-size=16384k \
+   --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 ```
 # Backup all of your /data/users/yourHPCLogin
 ```
-setsid rclone copy -vv --include-from homeDirFilesToSave.txt --exclude-from filesToExclude.txt \
-   /data/users/yourHPCLogin gDrive:uci_hpc_homedir_backup --dump-filters --log-file ~/hpc_homedir_cloud_backup.log \
-   --transfers=32 --checkers=16 --drive-chunk-size=16384k --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
+setsid rclone copy -vv --include-from homeDirFilesToSave.txt \
+   --exclude-from filesToExclude.txt \
+   /data/users/yourHPCLogin gDrive:uci_hpc_homedir_backup \
+   --dump-filters --log-file ~/hpc_homedir_cloud_backup.log \
+   --transfers=32 --checkers=16 --drive-chunk-size=16384k \
+   --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 ```
 `setsid` - makes sure rclone runs even if HPC connection lost
 `pub[home]DirFilesToSave.txt` - list of files or patterns (globs)
