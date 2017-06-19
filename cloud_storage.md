@@ -168,14 +168,14 @@ First check that there are no other rclone instances you are running:
 If there are, backup is still running.  Check the log files to see the state of the backup.  To kill the backup execute `kill -9 [PID]`, where `[PID]` is the process ID of the rclone session you have been running. 
 
 Create Google Drive backup directories (one to save everything in from your /pub/yourHPCLogin and /data/users/yourHPCLogin:
-`
+```
 module purge
 module load rclone
 rclone mkdir gDrive:uci_hpc_pubdir_backup
 rclone mkdir gDrive:uci_hpc_homedir_backup
-`
-The biggest issue with doing manual backups yourself is the time it takes for the backup to complete.  To ensure the backup takes place after you log out or lose connection to HPC, create a short bash script called *backup_to_gDrive.sh* as follows:
 ```
+The biggest issue with doing manual backups yourself is the time it takes for the backup to complete.  To ensure the backup takes place after you log out or lose connection to HPC, create a short bash script called *backup_to_gDrive.sh* as follows:
+
 # Backup all of your /pub/yourHPCLogin
 setsid rclone copy -vv --include-from pubDirFilesToSave.txt --exclude-from filesToExclude.txt \
    /pub/yourHPCLogin gDrive:uci_hpc_pubdir_backup --dump-filters --log-file ~/hpc_pubdir_cloud_backup.log \
