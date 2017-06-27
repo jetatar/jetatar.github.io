@@ -176,7 +176,7 @@ rclone mkdir gDrive:uci_hpc_homedir_backup
 ```
 The biggest issue with doing manual backups yourself is the time it takes for the backup to complete.  To ensure the backup takes place after you log out or lose connection to HPC, create a short bash script called *backup_to_gDrive.sh* as follows:
 
-# Backup all of your /pub/yourHPCLogin
+### Backup all of your /pub/yourHPCLogin
 ```
 setsid rclone copy -vv --include-from pubDirFilesToSave.txt \
    --exclude-from filesToExclude.txt \
@@ -185,7 +185,7 @@ setsid rclone copy -vv --include-from pubDirFilesToSave.txt \
    --transfers=32 --checkers=16 --drive-chunk-size=16384k \
    --drive-upload-cutoff=16384k --drive-use-trash &>/dev/null
 ```
-# Backup all of your /data/users/yourHPCLogin
+### Backup all of your /data/users/yourHPCLogin
 ```
 setsid rclone copy -vv --include-from homeDirFilesToSave.txt \
    --exclude-from filesToExclude.txt \
