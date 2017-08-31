@@ -1,3 +1,5 @@
+[Linux and HPC Intro](linux_hpc_intro.md)
+
 [CHRS Computational Infrastructure Design](chrs_infrastructure.md)
 
 [Cloud Backup and Storage](cloud_storage.md)
