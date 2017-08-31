@@ -1,1 +1,1 @@
-![Intro to Linux and HPC](https://github.com/jetatar/Docs/blob/master/Linux%20and%20HPC%20Intro.png?raw=true)
+![Intro to Linux and HPC](https://github.com/jetatar/Docs/blob/master/Linux_and_HPC_Intro.png?raw=true)
