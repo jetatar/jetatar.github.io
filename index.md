@@ -1,4 +1,4 @@
-[CHRS Computational Infrastructure Design](chrs_infrastrcture.md)
+[CHRS Computational Infrastructure Design](chrs_infrastructure.md)
 
 [Cloud Backup and Storage](cloud_storage.md)
 
