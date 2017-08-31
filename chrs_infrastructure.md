@@ -14,7 +14,7 @@ Two database servers with the specifications below have been bought and installe
 
 ![Database servers](https://github.com/jetatar/Docs/blob/master/chrs_database.png?raw=true)
 
-The following configuration was being consider for additional CHRS compute nodes.  The group was looking for funding.  When the nodes are acquired they will be part of the HPC cluster.  Per the Center's request, the nodes will not be joining the public queue when the are unused.
+The following configuration was being consider for additional CHRS compute nodes.  Instead of going with two compute nodes, they decided to spend the money on three slightly less powerful ones.  The group has secured the funding for the nodes.  They will be delivered and added to the HPC cluster shortly.  Per the Center's request, the nodes will not be joining the public queue when the are unused.
 
 ![Compute nodes](https://github.com/jetatar/Docs/blob/master/chrs_compute.png?raw=true)
 
