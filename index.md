@@ -6,6 +6,8 @@
 
 [Matlab THREDDS Database Workflow](https://github.com/jetatar/THREDDS_Scraper/wiki)
 
+[Basic C++ Coding Standards](cpp_coding_standards.md)
+
 <!--
 ## Welcome to GitHub Pages
 
