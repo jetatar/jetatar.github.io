@@ -1,6 +1,8 @@
+[CHRS Computational Infrastructure Design](chrs_infrastrcture.md)
+
 [Cloud Backup and Storage](cloud_storage.md)
 
-[Matlab THREDDS Database Workflow](https://github.oit.uci.edu/jtatar/CHRS_Connect)
+[Matlab THREDDS Database Workflow](https://github.com/jetatar/THREDDS_Scraper/wiki)
 
 <!--
 ## Welcome to GitHub Pages
