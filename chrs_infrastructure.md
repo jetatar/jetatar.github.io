@@ -1,6 +1,6 @@
 # Overview
 
-![Sketch](https://github.com/jetatar/Docs/blob/master/CHRS_QuickSketch.jpg)
+![Sketch](Docs/CHRS_QuickSketch.jpg)
 
 # Details
 
