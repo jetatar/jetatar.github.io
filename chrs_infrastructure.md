@@ -14,10 +14,10 @@ Two database servers with the specifications below have been bought and installe
 
 ![Database servers](https://github.com/jetatar/Docs/blob/master/chrs_database.png?raw=true)
 
-
+The following configuration was being consider for additional CHRS compute nodes.  The group was looking for funding.  When the nodes are acquired they will be part of the HPC cluster.  Per the Center's request, the nodes will not be joining the public queue when the are unused.
 
 ![Compute nodes](https://github.com/jetatar/Docs/blob/master/chrs_compute.png?raw=true)
 
-A 500TB JBOD with the configuration below was collocated in the datacenter with the new compute nodes.  The JBOD is partially polulated on per need basis.  The server was setup to run ZFS.  The JBOD will be primarily used for archival storage.
+A 500TB JBOD with the configuration below was collocated in the datacenter with the Center's existing compute nodes.  The JBOD is partially polulated on per need basis.  The server was setup to run ZFS.  The JBOD will be primarily used for archival storage.
 
 ![JBOD](https://github.com/jetatar/Docs/blob/master/chrs_jbod.png?raw=true)
