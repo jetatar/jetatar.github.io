@@ -48,6 +48,20 @@ To retrieve your existing proxy credential, execute the following command on FIO
 myproxy-logon -T -s nerscca.nersc.gov
 ```
 
+#### Get data FROM NERSC
+
+From your FIONA session, execute:
+
+```
+globus-url-copy -vb -fast -p 10 gsiftp://jtatar@dtn01.nersc.gov/global/u2/j/jtatar/10G.dat file:/home/jtatar/10GBtest.dat
+```
+#### Push data TO NERSC
+
+Again, from your FIONA session, execute:
+
+```
+globus-url-copy -vb -p 10 file:///home/jtatar/CHRS-CONNECT-CODES_IVT750.rar gsiftp://jtatar@dtn01.nersc.gov/~/
+```
 
 # References
 http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp/
