@@ -23,6 +23,14 @@ No filesystems are mounted on the DTN.  All files that need to be transferred ou
 
 # File Transfer Software
 
+GridFTP is recommended for large data transfers. The Globus web client provides an intuitive interface for GridFTP transfers.  The Globus interface does automatic transfer tuning that performs as well as expert tuned GridFTP.  For manual, command line initiated GridFTP transfers, please see the GridFTP Data Transfer page.
+
+For file transfers smaller than a few GB, you can use Secure Copy (SCP) or Secure FTP (SFTP).
+
+# Restrictions
+
+In order to ensure that the FIONA DTN performs optimally for data transfers, we request that users restrict use of the system to tasks related to data transfer only.  You are not allowed to run databases on the server or do data processing or testing that saturate the node's resources.  The DTN's memory and CPU resources must be kept available for interactive user data transfers.
+
 # References
 http://www.oit.uci.edu/wp-content/uploads/UCI-Lightpath-Access-Policy.pdf
 http://sites.uci.edu/rcna/uci-lightpath/
