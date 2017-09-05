@@ -12,6 +12,10 @@ The basic GridFTP client, distributed with the Globus Toolkit, is called **globu
 ### Get a Grid certificate
 A GridFTP certificate is a type of digital ID (an X.509 digital certificate).  It is issued by a Certification Authority.  For all DTN FIONA users the Certification Authority is the UCI RCIC.  The certificate uniquely identifies you (the GridFTP user) for all GridFTP transfers.
 
+```
+grid-cert-request
+```
+
 ### Initialize a proxy certificate
 
 
