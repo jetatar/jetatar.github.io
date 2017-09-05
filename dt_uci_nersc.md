@@ -11,4 +11,13 @@ The data transfer node is:
 
 * fiona.oit.uci.edu 
 
-It is located at the UCI data center and setup for interactive use.
+It is located at the UCI data center and setup for interactive use.  The FIONA DTN is **not** on UCI's general network, UCINet, but it can access any UCINet host and vice versa.  The DTN has a 10Gb ethernet link but no physical link to the HPC or Greenplanet clusters' filesystems.
+
+# Access
+
+UCI researchers need to request access to the DTN (jtatar@uci.edu) and provide information on what research related needs they will utilize the network for.  For interactive use, the DTN can be accessed via SSH.  For data transfer, the DTN supports the GridFTP services.  The DTN also setup as a Globus endpoint that can be found on Globus online by searching for **UCI#DTN**.
+
+# References
+http://www.oit.uci.edu/wp-content/uploads/UCI-Lightpath-Access-Policy.pdf
+http://sites.uci.edu/rcna/uci-lightpath/
+
