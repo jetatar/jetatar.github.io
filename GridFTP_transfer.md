@@ -20,6 +20,26 @@ Next, **inform the RCIC staff (ie Joulien Tatar) that you have a certificate you
 
 ### Initialize a proxy certificate
 
+Once you have an approved grid certificate you can now initialize it.
+
+```
+grid-proxy-init -debug -verify
+```
+
+### Set the GLOBUS_TCP_PORT_RANGE
+
+Make sure GLOBUS_TCP_PORT_RANGE is set.
+
+```
+echo GLOBUS_TCP_PORT_RANGE
+```
+
+If the variable is not set, set it:
+
+```
+export GLOBUS_TCP_PORT_RANGE="50000,51000"
+```
+
 
 # References
 http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp/
