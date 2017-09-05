@@ -11,7 +11,7 @@ The data transfer node is:
 
 * fiona.oit.uci.edu 
 
-It is located at the UCI data center and setup for interactive use.  The FIONA DTN is **not** on UCI's general network, UCINet, but it can access any UCINet host and vice versa.  The DTN has a 10Gb ethernet link but no physical link to the HPC or Greenplanet clusters' filesystems.
+It is located at the UCI data center and setup for interactive use.  The FIONA DTN is **not** on UCI's general network, UCINet, but it can access any UCINet host and vice versa.  The DTN has a 10Gb ethernet link but has no direct physical link to the HPC or Greenplanet clusters' filesystems.
 
 # Access
 
