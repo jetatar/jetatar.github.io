@@ -40,6 +40,14 @@ If the variable is not set, set it:
 export GLOBUS_TCP_PORT_RANGE="50000,51000"
 ```
 
+### Transfer TO and FROM NERSC
+
+To retrieve your existing proxy credential, execute the following command on FIONA and enter your **LBL/NIM password** when prompted.
+
+```
+myproxy-logon -T -s nerscca.nersc.gov
+```
+
 
 # References
 http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp/
