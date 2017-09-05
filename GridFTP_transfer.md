@@ -7,7 +7,9 @@ GridFTP is an iteration of the FTP protocol, optimized for high-bandwidth grid c
 GridFTP is available on the UCI FIONA DTN: fiona.oit.uci.edu
 
 ## Using globus-url-copy
-The basic GridFTP client, distributed with the Globus Toolkit, is called **globus-url-copy**.  It is command line based and it is not interactive.  It allows only one file transfer at a time.
+The basic GridFTP client, distributed with the Globus Toolkit, is called **globus-url-copy**.  It is command line based and it is not interactive.  It allows only one file transfer at a time.  **globus-url-copy** is installed on the UCI FIONA DTN.  The following commands are to be executed from the FIONA.
+
+### Initialize a proxy certificate
 
 
 # References
