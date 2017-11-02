@@ -16,7 +16,7 @@ Waiting up to (but not exceeding) 2 min after clicking the link, you should see 
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterFilesBrowser.png?raw=true)
 Jupyterhub has been configured such that user's Juputerhub Single User Instances are all lauched on a selected queue where each user has been allocated the same system resources.
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterSingleNotebooksQueue.png?raw=true)
-
+To stop the Notebook press
 
 
 If you are able to successfully login, you should see the following screen (except no Admin button):
