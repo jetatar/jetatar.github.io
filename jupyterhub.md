@@ -10,10 +10,12 @@ At some point during or right after login you may get warning similar to this:
 Click on Advanced.  You should see a screen similar to this:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterhubloginWarning2.png?raw=true)
 Click on `Proceed to 128.200.84.31 (unsafe)`. 
-You should now see a button you can click in order to start a Jupyterhub (Single User) Notebook:
+If you are able to successfully login, you should see the following screen (except no Admin button for regular users).  Click on the "Start My Server" button in order to start a Jupyterhub (Single User) Notebook:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStartAServer.png?raw=true)
 Waiting up to (but not exceeding) 2 min after clicking the link, you should see a page with a file browser menu:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterFilesBrowser.png?raw=true)
+Jupyterhub has been configured such that user's Juputerhub Single User Instances are all lauched on a selected queue where each user has been allocated the same system resources.
+![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterSingleNotebooksQueue.png?raw=true)
 
 
 
