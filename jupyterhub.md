@@ -16,7 +16,14 @@ Waiting up to (but not exceeding) 2 min after clicking the link, you should see 
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterFilesBrowser.png?raw=true)
 Jupyterhub has been configured such that user's Juputerhub Single User Instances are all lauched on a selected queue where each user has been allocated the same system resources.
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterSingleNotebooksQueue.png?raw=true)
-To stop the Notebook press
+If you have a .ipynb file you want to work on, select it, and a new tab should open with the content of your Notebook or start a new Notebook by clicking on the 'New' button on the top right side of the Jupyterhub page:
+![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterNoteBookHelloWorld.png?raw=true)
+
+
+To stop the Notebook press the `Control Panel` button at the top right corner of the Notebook window.  Then you should see the following buttons:  
+![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStopNotebook.png?raw=true)
+
+Press the red `Stop My Server` button to stop your Notebook server.  Please note that if you don't stop your server when you no longer need a Jupyter Notebook instance, your Notebook will wastefully continue to occupy a core on the Jupyterhub queue.  Please don't forget to __stop your server__.  We reserve the right to delete your job if the resources you occupy are unused for an extended period of time.
 
 
 If you are able to successfully login, you should see the following screen (except no Admin button):
