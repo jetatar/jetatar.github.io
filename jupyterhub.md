@@ -18,17 +18,12 @@ Jupyterhub has been configured such that user's Juputerhub Single User Instances
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterSingleNotebooksQueue.png?raw=true)
 If you have a .ipynb file you want to work on, select it, and a new tab should open with the content of your Notebook or start a new Notebook by clicking on the 'New' button on the top right side of the Jupyterhub page:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStartPython3Notebook.png?raw=true)
+
 If you want to start a new Jupyterhub Notebook with Python 3, you will see:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterNoteBookHelloWorld.png?raw=true)
-
+Now you are ready to Pythonize away...
 
 To stop the Notebook press the `Control Panel` button at the top right corner of the Notebook window.  Then you should see the following buttons:  
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStopNotebook.png?raw=true)
 
 Press the red `Stop My Server` button to stop your Notebook server.  Please note that if you don't stop your server when you no longer need a Jupyter Notebook instance, your Notebook will wastefully continue to occupy a core on the Jupyterhub queue.  Please don't forget to __stop your server__.  We reserve the right to delete your job if the resources you occupy are unused for an extended period of time.
-
-
-If you are able to successfully login, you should see the following screen (except no Admin button):
-
-
-UCI's Jupyterhub Instance is running at: https://hpc.oit.uci.edu:8000.  If you try to connect from outside the UCI network, you will have first login to the UCI VPN pool before you are able to access HPC's Jupyterhub page.
