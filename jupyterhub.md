@@ -18,9 +18,9 @@ Jupyterhub has been configured such that user's Juputerhub Single User Instances
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterSingleNotebooksQueue.png?raw=true)
 If you have a .ipynb file you want to work on, select it, and a new tab should open with the content of your Notebook or start a new Notebook by clicking on the 'New' button on the top right side of the Jupyterhub page:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStartPython3Notebook.png?raw=true)
-
-
+If you want to start a new Jupyterhub Notebook with Python 3, you will see:
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterNoteBookHelloWorld.png?raw=true)
+
 
 To stop the Notebook press the `Control Panel` button at the top right corner of the Notebook window.  Then you should see the following buttons:  
 ![JuputerhubStartNotebook](https://github.com/jetatar/Docs/blob/master/JupyterStopNotebook.png?raw=true)
