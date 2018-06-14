@@ -1,3 +1,5 @@
+[AWS Elastic Cloud Bursting with Slurm](ElasticCloud.md)
+
 [Jupyterhub on UCI's HPC](jupyterhub.md)
 
 [GridFTP Data Transfers](GridFTP_transfer.md)
