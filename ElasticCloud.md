@@ -2,7 +2,7 @@
 Slurm's ability to extend into the could relies on its Power Save capabilities.  The Slurm Power Save module provides for a way to regulate nodes or queues' states based on usage or some other partition attribute.  With execution of pre- and post- scripting allowed by Power Save, nodes can be assimilated from AWS (and others) and disbanded when the cloud nodes are no longer needed.  To be able to do that successfully, Slurm needs to have a way of getting the AWS cloud nodes' names and IP addresses.
 
 ## slurm.conf
-*SelectType*
+**SelectType**
 
 Generally must be "select/linear". If Slurm is configured to allocate individual CPUs to jobs rather than whole nodes (e.g. SelectType=select/cons_res rather than SelectType=select/linear), then Slurm maintains bitmaps to track the state of every CPU in the system. If the number of CPUs to be allocated on each node is not known when the slurmctld daemon is started, one must allocate whole nodes to jobs rather than individual processors. The use of "select/cons_res" requires each node to have a CPU count set and the node eventually selected must have at least that number of CPUs.
 
@@ -11,9 +11,9 @@ _https://slurm.schedmd.com/power_save.html_
 
 _http://biocluster.ucr.edu/~jhayes/slurm/elastic_computing.html_
 
+_https://slurm.schedmd.com/quickstart_admin.html_
 
 # Troubleshooting a Slurm Partition in a 'DOWN' State
-
 ## Check Node Status
 ```
 [root@xcat2-master ~]# sinfo
