@@ -1,5 +1,10 @@
 # Configuring an Elastic Cloud Partition
 
+## References
+_https://slurm.schedmd.com/power_save.html_
+_http://biocluster.ucr.edu/~jhayes/slurm/elastic_computing.html_
+
+
 # Troubleshooting a Slurm Partition in a 'DOWN' State
 
 ## Check Node Status
@@ -61,3 +66,4 @@ _scontrol update nodename=nfs-1 state=resume_
 
 ## References:
 _https://www.eidos.ic.i.u-tokyo.ac.jp/~tau/lecture/parallel_distributed/2016/html/fix_broken_slurm.html_
+_https://slurm.schedmd.com/troubleshoot.html_
