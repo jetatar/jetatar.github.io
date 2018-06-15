@@ -5,7 +5,6 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## References
 _https://slurm.schedmd.com/power_save.html_
-
 _http://biocluster.ucr.edu/~jhayes/slurm/elastic_computing.html_
 
 
