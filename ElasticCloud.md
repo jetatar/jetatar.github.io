@@ -1,4 +1,6 @@
-# Troubleshooting a Slurm partition in a 'DOWN' state
+# Configuring an Elastic Cloud Partition
+
+# Troubleshooting a Slurm Partition in a 'DOWN' State
 
 ## Check Node Status
 ```
