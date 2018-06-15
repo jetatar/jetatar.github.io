@@ -1,10 +1,14 @@
 # Configuring an Elastic Cloud Partition
 Slurm's ability to extend into the could relies on its Power Save capabilities.  The Slurm Power Save module provides for a way to regulate nodes or queues' states based on usage or some other partition attribute.  With execution of pre- and post- scripting allowed by Power Save, nodes can be assimilated from AWS (and others) and disbanded when the cloud nodes are no longer needed.  To be able to do that successfully, Slurm needs to have a way of getting the AWS cloud nodes' names and IP addresses.
 
+## slurm.conf
+*SelectType*
 
+Generally must be "select/linear". If Slurm is configured to allocate individual CPUs to jobs rather than whole nodes (e.g. SelectType=select/cons_res rather than SelectType=select/linear), then Slurm maintains bitmaps to track the state of every CPU in the system. If the number of CPUs to be allocated on each node is not known when the slurmctld daemon is started, one must allocate whole nodes to jobs rather than individual processors. The use of "select/cons_res" requires each node to have a CPU count set and the node eventually selected must have at least that number of CPUs.
 
 ## References
 _https://slurm.schedmd.com/power_save.html_
+
 _http://biocluster.ucr.edu/~jhayes/slurm/elastic_computing.html_
 
 
@@ -30,6 +34,12 @@ slurm     1926  0.0  0.0 276508  2456 ?        Sl   Jun14   0:00 /usr/sbin/slurm
 [root@xcat2-master ~]# ps aux | grep munged
 munge     1092  0.0  0.0 243956  2216 ?        Sl   Jun14   0:00 /usr/sbin/munged
 ```
+Check munge:
+```
+munge -n | unmunge | grep STATUS
+STATUS:           Success (0)
+```
+
 ### On Compute
 Make sure the following daemons are running:
 _slurmd, munged_
@@ -38,6 +48,11 @@ _slurmd, munged_
 root     20214  0.0  0.1 131304  2552 ?        S    Jun13   0:00 /usr/sbin/slurmd
 [root@nfs-1 ~]# ps aux | grep munged
 munge      970  0.0  0.1 243956  2464 ?        Sl   May08   0:15 /usr/sbin/munged
+```
+Check munge:
+```
+munge -n | unmunge | grep STATUS
+STATUS:           Success (0)
 ```
 
 ## Check the Logs
