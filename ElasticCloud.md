@@ -10,6 +10,10 @@ slurm     1926  0.0  0.0 276508  2456 ?        Sl   Jun14   0:00 /usr/sbin/slurm
 ```
 
 ### On Compute
+```
+[root@nfs-1 ~]# ps aux | grep slurm
+root     20214  0.0  0.1 131304  2552 ?        S    Jun13   0:00 /usr/sbin/slurmd
+```
 
 ## Log files
 ### On Master
