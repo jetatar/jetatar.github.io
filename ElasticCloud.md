@@ -56,3 +56,6 @@ Start the _slurmd_ instance on the compute node.
 
 ## Last resort 
 _scontrol update nodename=nfs-1 state=resume_
+
+References:
+_https://www.eidos.ic.i.u-tokyo.ac.jp/~tau/lecture/parallel_distributed/2016/html/fix_broken_slurm.html_
