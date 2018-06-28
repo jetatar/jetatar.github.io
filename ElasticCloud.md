@@ -55,6 +55,15 @@ chmod 0700 /etc/munge/ /var/log/munge/
 systemctl enable munge
 systemctl start munge
 ```
+Test communication between Munge clients.  From the slurm master node try:
+```
+munge -n
+munge -n | unmunge
+munge -n | ssh nfs-1 unmunge
+remunge
+```
+If no errors are encoutered, Munge is working as expected.
+
 
 
 There are a number of configuration files that need to be propagated on all nodes.
