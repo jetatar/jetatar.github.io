@@ -17,7 +17,9 @@ Slurm and Munge require UID and GID to be the same across all nodes.
 Slurm can store various accounting data in MariaDB.  It only needs to bet setup on the node that will run the master slurm instance.
 
 If not installed, install MariaDB:
+
 ```yum install mariadb-server mariadb-devel -y```
+
 
 ### Munge (all nodes, install before Slurm)
 
@@ -27,7 +29,32 @@ Install munge on all nodes:
 yum install epel-release
 yum install munge munge-libs munge-devel -y
 ```
-
+After installing Munge, create a secret key **only on the slurm server node**, where munge will also be running by:
+```
+yum install rng-tools -y
+rngd -r /dev/urandom
+/usr/sbin/create-munge-key -r 
+dd if=/dev/urandom bs=1 count=1024 > /etc/munge/munge.key
+chown munge: /etc/munge/munge.key
+chmod 400 /etc/munge/munge.key
+```
+At the end it should look something like this:
+```
+[root@xcat2-master ~]# ls -la /etc/munge/munge.key
+-r-------- 1 munge munge 1024 Feb  1 12:35 /etc/munge/munge.key
+```
+This key should now be propagated to all of the compute nodes in the cluster:
+```
+scp /etc/munge/munge.key root@nfs-1:/etc/munge
+scp /etc/munge/munge.key centos@18.237.111.190:/etc/munge (ie: cloud instance)
+```
+Then login to every node, correct permissions and start the munge daemon:
+```
+chown -R munge: /etc/munge/ /var/log/munge/
+chmod 0700 /etc/munge/ /var/log/munge/
+systemctl enable munge
+systemctl start munge
+```
 
 
 There are a number of configuration files that need to be propagated on all nodes.
