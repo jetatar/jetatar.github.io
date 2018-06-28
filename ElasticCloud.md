@@ -3,11 +3,21 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## Setup
 
+### Global Users (all nodes, setup before Slurm or Munge install)
+
+Slurm and Munge require UID and GID to be the same across all nodes.
+
+
+
+
+
+
+
 ### MariaDB (master slurm instance, install before Slurm)
 Slurm can store various accounting data in MariaDB.  It only needs to bet setup on the node that will run the master slurm instance.
 
 If not installed, install MariaDB:
-`yum install mariadb-server mariadb-devel -y`
+```yum install mariadb-server mariadb-devel -y```
 
 ### Munge (all nodes, install before Slurm)
 
@@ -17,9 +27,6 @@ Install munge on all nodes:
 yum install epel-release
 yum install munge munge-libs munge-devel -y
 ```
-
-### Global Users 
-
 
 
 
