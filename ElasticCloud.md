@@ -3,6 +3,8 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## Setup
 
+There are a number of configuration files that need to be propagated on all nodes.
+
 ## slurm.conf
 **SelectType**
 
