@@ -1,5 +1,7 @@
 # Configuring an Elastic Cloud Partition
-Slurm's ability to extend into the could relies on its Power Save capabilities.  The Slurm Power Save module provides for a way to regulate nodes or queues' states based on usage or some other partition attribute.  With execution of pre- and post- scripting allowed by Power Save, nodes can be assimilated from AWS (and others) and disbanded when the cloud nodes are no longer needed.  To be able to do that successfully, Slurm needs to have a way of getting the AWS cloud nodes' names and IP addresses.
+Slurm's ability to extend into the could relies on its Power Save capabilities.  The Slurm Power Save module provides for a way to regulate nodes or queues' states based on usage or some other partition attribute.  With execution of pre- and post- scripting allowed by Power Save, nodes can be assimilated from AWS (and others) and disbanded when the cloud nodes are no longer needed.  To be able to do that successfully, Slurm needs to ultimately have a way of getting the AWS cloud nodes' names and IP addresses, unless the AWS instance is assigned a static IP and hostname.
+
+## Setup
 
 ## slurm.conf
 **SelectType**
