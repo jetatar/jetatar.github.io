@@ -3,7 +3,15 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## Setup
 
+If not installed, install MariaDB on all nodes (master slurm instance as well as compute/cloud nodes):
+yum install mariadb-server mariadb-devel -y
+
+
+
 There are a number of configuration files that need to be propagated on all nodes.
+slurm:
+slurm.conf
+munge:
 
 ## slurm.conf
 **SelectType**
