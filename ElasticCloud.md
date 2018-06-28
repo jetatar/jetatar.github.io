@@ -3,8 +3,23 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## Setup
 
-If not installed, install MariaDB on all nodes (master slurm instance as well as compute/cloud nodes):
-yum install mariadb-server mariadb-devel -y
+### MariaDB (master slurm instance, install before Slurm)
+Slurm can store various accounting data in MariaDB.  It only needs to bet setup on the node that will run the master slurm instance.
+
+If not installed, install MariaDB:
+`yum install mariadb-server mariadb-devel -y`
+
+### Munge (all nodes, install before Slurm)
+
+Munge is an authentication tool used to identify messaging from the Slurm machines.
+Install munge on all nodes:
+```
+yum install epel-release
+yum install munge munge-libs munge-devel -y
+```
+
+### Global Users 
+
 
 
 
