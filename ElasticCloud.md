@@ -35,8 +35,9 @@ Start a SQL interactive session and:
 mysql> grant all on slurm_acct_db.* TO 'slurm'@'localhost'
 mysql> create database slurm_acct_db;
 ```
-Then configure the /etc/slurm/slurmdbd.conf file on the master instance as shown [here]().
-
+Then configure the /etc/slurm/slurmdbd.conf file on the master instance as shown [here](https://github.com/jetatar/Docs/blob/master/slurmdbd.conf).
+systemctl enable slurmdbd
+systemctl start slurmdbd
 ### Munge (all nodes, install before Slurm)
 
 Munge is an authentication tool used to identify messaging from the Slurm machines.
