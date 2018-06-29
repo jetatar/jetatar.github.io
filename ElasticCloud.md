@@ -23,9 +23,19 @@ Slurm and Munge require UID and GID to be the same across all nodes.
 Slurm can store various accounting data in MariaDB.  It only needs to bet setup on the node that will run the master slurm instance.
 
 If not installed, install MariaDB:
+```
+yum install mariadb-server mariadb-devel -y
+systemctl enable mariadb
+systemctl start mariadb
+mysql_secure_installation
+```
 
-```yum install mariadb-server mariadb-devel -y```
-
+Start a SQL interactive session and:
+```
+mysql> grant all on slurm_acct_db.* TO 'slurm'@'localhost'
+mysql> create database slurm_acct_db;
+```
+Then configure the /etc/slurm/slurmdbd.conf file on the master instance as shown [here]().
 
 ### Munge (all nodes, install before Slurm)
 
