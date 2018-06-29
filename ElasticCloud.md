@@ -70,7 +70,7 @@ remunge
 ```
 If no errors are encoutered, Munge is working as expected.
 
-## SLURM
+### SLURM
 
 Create Slurm RPMS to install on all nodes:
 ```
@@ -88,15 +88,71 @@ Now install the RPMs **on all nodes**:
 rpm -Uvh ~/rpmbuild/RPMS/x86_64/*.rpm
 ```
 
-### Create and Configure slurm.conf
+#### Create and Configure slurm.conf
 
-On the master slurm node, create a slurm.conf file, as the one [here](https://github.com/jetatar/Docs/blob/master/slurm.conf)
+On the master slurm node, create a slurm.conf file, as the one [here](https://github.com/jetatar/Docs/blob/master/slurm.conf).
+After copying the slurm.conf file to the cloud node, **modify its slurm.conf** such that:
+```
+ControlAddr=128.200.34.10
+```
+According to the settings in the [slurm.conf](https://github.com/jetatar/Docs/blob/master/slurm.conf) file we need to do the following on the master slurm instance:
+```
+touch /var/log/slurmctld.log
+chown slurm: /var/log/slurmctld.log
+```
+While on the compute nodes do the following:
+```
+touch /var/log/slurmd.log
+chown slurm: /var/log/slurmd.log
+```
+Test the slurmd configuration on the compute nodes by executing:
+```
+[centos@aws-comp0 ~]$ slurmd -C
+NodeName=aws-comp0 CPUs=1 Boards=1 SocketsPerBoard=1 CoresPerSocket=1 ThreadsPerCore=1 RealMemory=990
+UpTime=8-01:39:56
+```
 
+### Firewall (if running)
+On the compute nodes, make sure any firewall is disabled (at least for the time being).
+```
+systemctl stop firewalld
+systemctl disable firewalld
+```
+On the slurm server be sure to open the following ports:
+```
+firewall-cmd --permanent --zone=public --add-port=6817/udp
+firewall-cmd --permanent --zone=public --add-port=6817/tcp
+firewall-cmd --permanent --zone=public --add-port=6818/udp
+firewall-cmd --permanent --zone=public --add-port=6818/tcp
+firewall-cmd --permanent --zone=public --add-port=7321/udp
+firewall-cmd --permanent --zone=public --add-port=7321/tcp
+firewall-cmd --reload
+```
 
+### Clock syncronization
 
-**SelectType**
+Every node must have ntpd running so clocks are properly syncronized:
+```
+yum install ntp -y
+chkconfig ntpd on
+ntpdate pool.ntp.org
+systemctl start ntpd
+```
 
-Generally must be "select/linear". If Slurm is configured to allocate individual CPUs to jobs rather than whole nodes (e.g. SelectType=select/cons_res rather than SelectType=select/linear), then Slurm maintains bitmaps to track the state of every CPU in the system. If the number of CPUs to be allocated on each node is not known when the slurmctld daemon is started, one must allocate whole nodes to jobs rather than individual processors. The use of "select/cons_res" requires each node to have a CPU count set and the node eventually selected must have at least that number of CPUs.
+### Start slurmd on Compute Nodes First
+systemctl enable slurmd
+systemctl start slurmd
+
+### Start slurmctld on Master Slurm Node:
+systemctl enable slurmctld
+systemctl start slurmctld
+
+### Test and Debug
+On compute:
+tail -f /var/log/slurmd.log
+On master:
+tail -f /var/log/slurmctld.log
+
 
 ## References
 _https://slurm.schedmd.com/power_save.html_
