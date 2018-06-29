@@ -90,7 +90,7 @@ rpm -Uvh ~/rpmbuild/RPMS/x86_64/*.rpm
 
 ### Create and Configure slurm.conf
 
-On the master slurm node, create a slurm.conf file, as the one here.
+On the master slurm node, create a slurm.conf file, as the one [https://github.com/jetatar/Docs/blob/master/slurm.conf](here).
 
 
 
