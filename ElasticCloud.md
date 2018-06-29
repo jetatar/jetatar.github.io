@@ -163,17 +163,54 @@ systemctl start slurmctld
 ### Test and Debug
 On compute:
 ```
-tail -f /var/log/slurmd.log
+tail -f /var/log/slurmd.log, /var/log/messages
 ```
 On master:
 ```
-tail -f /var/log/slurmctld.log
+tail -f /var/log/slurmctld.log, /var/log/slurm/slurmdbd.log
+systemctl status slurmctrld slurmdbd munge -l
 ```
 
-Useful commands:
+
+Useful commands for troubleshooting:
 ```
 scontrol show nodes
 scontrol show jobs
+scontrol show daemons
+srun --ntasks=16 --label /bin/hostname
+sbatch # submit script
+salloc # create job alloc and start shell, interactive
+srun # create job alloc and launch job step, MPI
+sattach #
+sinfo
+sinfo --Node
+sinfo -p debug
+squeue -i60
+squeue -u -t all
+squeue -s -p debug
+smap
+sview
+scontrol show partition
+scontrol update PartitionName=debug MaxTime=60
+scontrol show config
+sacct -u jtatar
+sacct -p debug
+sstat
+sreport
+sacctmgr
+sprio
+sshare
+sdiag
+scancel --user=jtatar --state=pending
+scancel 444445
+strigger
+# Submit a job array with index values between 0 and 31
+sbatch --array=0-31 -N1 tmp
+# Submit a job array with index values of 1, 3, 5 and 7
+sbatch --array=1,3,5,7 -N1 tmp
+# Submit a job array with index values between 1 and 7
+# with a step size of 2 (i.e. 1, 3, 5 and 7)
+sbatch --array=1-7:2 -N1 tmp
 ```
 
 
