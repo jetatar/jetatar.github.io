@@ -99,6 +99,8 @@ According to the settings in the [slurm.conf](https://github.com/jetatar/Docs/bl
 ```
 touch /var/log/slurmctld.log
 chown slurm: /var/log/slurmctld.log
+mkdir /var/log/slurm
+chown -R slurm:slurm /var/log/slurm
 ```
 While on the compute nodes do the following:
 ```
@@ -149,9 +151,19 @@ systemctl start slurmctld
 
 ### Test and Debug
 On compute:
+```
 tail -f /var/log/slurmd.log
+```
 On master:
+```
 tail -f /var/log/slurmctld.log
+```
+
+Useful commands:
+```
+scontrol show nodes
+scontrol show jobs
+```
 
 
 ## References
@@ -163,6 +175,9 @@ _https://slurm.schedmd.com/quickstart_admin.html_
 
 _http://sysadm.mielnet.pl/building-and-installing-rpm-slurm-on-centos-7/_
 
+_https://www.slothparadise.com/how-to-install-slurm-on-centos-7-cluster/_
+
+_http://www.hpckp.org/images/training/slurm15/02-hosts-partitions.pdf_
 
 # Troubleshooting a Slurm Partition in a 'DOWN' State
 ## Check Node Status
