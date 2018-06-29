@@ -3,6 +3,12 @@ Slurm's ability to extend into the could relies on its Power Save capabilities. 
 
 ## Setup
 
+* Setup Global Users
+* Install, setup, and enable MariaDB
+* Install, setup and enable Munge
+* Install, setup and enable Slurm
+
+
 ### Global Users (all nodes, setup before Slurm or Munge install)
 
 Slurm and Munge require UID and GID to be the same across all nodes.
@@ -64,14 +70,30 @@ remunge
 ```
 If no errors are encoutered, Munge is working as expected.
 
+## SLURM
+
+Create Slurm RPMS to install on all nodes:
+```
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install -y munge-devel munge-libs readline-devel perl-ExtUtils-MakeMaker openssl-devel pam-devel rpm-build perl-DBI perl-Switch munge mariadb-devel
+```
+Download the desired version of Slurm from: https://www.schedmd.com/downloads.php
+Then build the RPM packages:
+
+```
+rpmbuild -ta slurm-17.11.2.tar.bz2
+```
+Now install the RPMs **on all nodes**:
+```
+rpm -Uvh ~/rpmbuild/RPMS/x86_64/*.rpm
+```
+
+### Create and Configure slurm.conf
+
+On the master slurm node, create a slurm.conf file, as the one here.
 
 
-There are a number of configuration files that need to be propagated on all nodes.
-slurm:
-slurm.conf
-munge:
 
-## slurm.conf
 **SelectType**
 
 Generally must be "select/linear". If Slurm is configured to allocate individual CPUs to jobs rather than whole nodes (e.g. SelectType=select/cons_res rather than SelectType=select/linear), then Slurm maintains bitmaps to track the state of every CPU in the system. If the number of CPUs to be allocated on each node is not known when the slurmctld daemon is started, one must allocate whole nodes to jobs rather than individual processors. The use of "select/cons_res" requires each node to have a CPU count set and the node eventually selected must have at least that number of CPUs.
@@ -82,6 +104,9 @@ _https://slurm.schedmd.com/power_save.html_
 _http://biocluster.ucr.edu/~jhayes/slurm/elastic_computing.html_
 
 _https://slurm.schedmd.com/quickstart_admin.html_
+
+_http://sysadm.mielnet.pl/building-and-installing-rpm-slurm-on-centos-7/_
+
 
 # Troubleshooting a Slurm Partition in a 'DOWN' State
 ## Check Node Status
