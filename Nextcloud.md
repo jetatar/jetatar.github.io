@@ -123,3 +123,6 @@ Alias /nextcloud "/var/www/html/nextcloud/"
 ```
 Head to http://YOUR_IP_ADDRESS/nextcloud/ and you will be facing the following screen:
 ![](https://github.com/jetatar/Docs/blob/master/NextCloud_SetupScreen.png?raw=true)
+
+Select an administrator username and password. Then click on “Storage & Database“, here you can select the data folder, but if you don’t know what you’re doing it’s best if you leave it with the default value. Then select the MariaDB database. Fill everything and if you’ve followed all the steps correctly you should be seeing the Files app:
+![](https://github.com/jetatar/Docs/blob/master/NextCloud_FilesApp.png?raw=true)
