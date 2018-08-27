@@ -1,5 +1,7 @@
 [AWS Elastic Cloud Bursting with Slurm](ElasticCloud.md)
 
+[Installing and Configuring Nextcloud](Nextcloud.md)
+
 [Jupyterhub on UCI's HPC](jupyterhub.md)
 
 [GridFTP Data Transfers](GridFTP_transfer.md)
