@@ -92,3 +92,34 @@ Now we can test whether our web server can correctly display content generated b
 
 The address you want to visit will be: `http://your_server_IP_address/info.php`
 This page should give you information about your server from the perspective of PHP. It is useful for debugging and to ensure that your settings are being applied correctly.  You probably want to remove this file after this test because it could actually give information about your server to unauthorized users.
+
+## Installing NextCloud
+
+With these step we download the software and extract it:
+```
+cd /var/www/html
+curl -o nextcloud-13-latest.tar.bz2 https://download.nextcloud.com/server/releases/latest-13.tar.bz2
+tar -xvjf nextcloud-12-latest.tar.bz2
+mkdir nextcloud/data
+chown -R apache:apache nextcloud
+rm nextcloud-13-latest.tar.bz2
+```
+Now we need to create a new file in /etc/httpd/conf.d/nextcloud.conf and add the following lines:
+```
+Alias /nextcloud "/var/www/html/nextcloud/"
+ 
+<Directory /var/www/html/nextcloud/>
+  Options +FollowSymlinks
+  AllowOverride All
+ 
+ <IfModule mod_dav.c>
+  Dav off
+ </IfModule>
+ 
+ SetEnv HOME /var/www/html/nextcloud
+ SetEnv HTTP_HOME /var/www/html/nextcloud
+ 
+</Directory>
+```
+Head to http://YOUR_IP_ADDRESS/nextcloud/ and you will be facing the following screen:
+![NextCloudSetup](https://github.com/jetatar/Docs/blob/master/NextCloud_SetupScreen.png)
