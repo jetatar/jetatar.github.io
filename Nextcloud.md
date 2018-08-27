@@ -44,3 +44,18 @@ Reloading privilege tables..
  ... Success!
 ```
 For the rest of the questions, you should simply hit the "ENTER" key through each prompt to accept the default values. This will remove some sample users and databases, disable remote root logins, and load these new rules so that MySQL immediately respects the changes we have made.
+
+### Install PHP
+```
+sudo yum install php php-mysql
+```
+This should install PHP without any problems. We need to restart the Apache web server in order for it to work with PHP.
+```
+sudo systemctl restart httpd.service
+```
+
+In order to test that our system is configured properly for PHP, we can create a very basic PHP script.
+
+We will call this script _info.php_. In order for Apache to find the file and serve it correctly, it must be saved to a very specific directory, which is called the "web root".
+
+In CentOS 7, this directory is located at `/var/www/html/`. We can create the file at that location by typing:
