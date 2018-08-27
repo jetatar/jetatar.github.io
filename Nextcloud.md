@@ -122,5 +122,4 @@ Alias /nextcloud "/var/www/html/nextcloud/"
 </Directory>
 ```
 Head to http://YOUR_IP_ADDRESS/nextcloud/ and you will be facing the following screen:
-![NextCloudSetup]
-(https://github.com/jetatar/Docs/blob/master/NextCloud_SetupScreen.png)
+![](https://github.com/jetatar/Docs/blob/master/NextCloud_SetupScreen.png)
