@@ -29,3 +29,18 @@ Now that our MySQL database is running, we want to run a simple security script 
 ```
 sudo mysql_secure_installation
 ```
+The prompt will ask you for your current root password. Since you just installed MySQL, you most likely won’t have one, so leave it blank by pressing enter. Then the prompt will ask you if you want to set a root password. Go ahead and enter _Y_, and follow the instructions:
+```
+Enter current password for root (enter for none):
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorization.
+
+New password: password
+Re-enter new password: password
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+```
+For the rest of the questions, you should simply hit the "ENTER" key through each prompt to accept the default values. This will remove some sample users and databases, disable remote root logins, and load these new rules so that MySQL immediately respects the changes we have made.
