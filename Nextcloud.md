@@ -140,42 +140,33 @@ Everyone with an UCI username and password should now be able to authenticate an
 
 A number of potentially useful Nextcloud apps were tested, including:
 
-		○ File Access Control
+○ File Access Control
 		
-		○ Group Folders
+○ Group Folders
 		
-		○ Files Clipboard
+○ Files Clipboard
 		
-		○ Quota Warning
+○ Quota Warning
 		
-		○ Ransomware protection
+○ Ransomware protection
 		
-		○ W2G2 - allows users to lock files and folders
+○ W2G2 - allows users to lock files and folders
 		
-		○ User usage report
+○ User usage report
 		
-		○ Circles
+○ Circles
 		
-		○ Impersonate
+○ Impersonate
 		
-		○ Retention
+○ Retention
 		
-		○ Full Text Search - ElastiSearch Platform
+○ Full Text Search - ElastiSearch Platform
 		
-		○ Ownbackup
+○ Ownbackup
 		
-		○ Snapshots
+○ Snapshots
 
-	- Nextcloud apps
-		○ No official Duo App
-		○ Configured using FreeOTP
-	- New version of Nextcloud is out 13.0.0 (currently running 12.x)
-	- Updated Nextcloud Shibboleth module to 1.4.2 - no problem.
-	- Owncloud has a Duo app
-	- Installed a number of Nextcloud plugins:
-	- Updated to Nextcloud 13.
-		○ That automatically disabled the Dual Authentication app since it is not stable with the latest Nextcloud version.
-
+○ No official Duo App but was able to configured dual authentication using FreeOTP
 
 
 ## Nextcloud vs ownCloud
