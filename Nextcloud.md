@@ -139,18 +139,31 @@ Everyone with an UCI username and password should now be able to authenticate an
 ## Testing Nextcloud Plugins
 
 A number of potentially useful Nextcloud apps were tested, including:
+
 		○ File Access Control
+		
 		○ Group Folders
+		
 		○ Files Clipboard
+		
 		○ Quota Warning
+		
 		○ Ransomware protection
+		
 		○ W2G2 - allows users to lock files and folders
+		
 		○ User usage report
+		
 		○ Circles
+		
 		○ Impersonate
+		
 		○ Retention
+		
 		○ Full Text Search - ElastiSearch Platform
+		
 		○ Ownbackup
+		
 		○ Snapshots
 
 	- Nextcloud apps
