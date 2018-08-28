@@ -126,3 +126,14 @@ Head to http://YOUR_IP_ADDRESS/nextcloud/ and you will be facing the following s
 
 Select an administrator username and password. Then click on “Storage & Database“, here you can select the data folder, but if you don’t know what you’re doing it’s best if you leave it with the default value. Then select the MariaDB database. Fill everything and if you’ve followed all the steps correctly you should be seeing the Files app:
 ![](https://github.com/jetatar/Docs/blob/master/NextCloud_FilesApp.png?raw=true)
+
+## Configuring Single-Sign-On 
+
+The "SSO & SAML" app has to be enabled.  The app is part of the Nextcloud install package, but is disabled by default.  To enable the app go to your Nextcloud Apps page. It can then be found in Nextcloud's “SSO & SAML authentication” section.
+
+## References
+https://www.marksei.com/install-nextcloud-13-centos-7/
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-owncloud-on-centos-7
+https://docs.nextcloud.com/server/12/admin_manual/configuration_server/sso_configuration.html?highlight=ldap
+https://apps.nextcloud.com/apps/user_saml
+https://www.oit.uci.edu/idm/shibboleth/
