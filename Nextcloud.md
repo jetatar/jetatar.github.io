@@ -168,6 +168,7 @@ A number of potentially useful Nextcloud apps were tested, including:
 
 ○ No official Duo App but was able to configured dual authentication using FreeOTP
 
+Some general impressions from using Nextcloud's apps and marketplace are that not all apps are stable.  When upgrading to the latest version of Nextcloud, some of the apps were automatically disabled, because they were not yet compatible with the latest NC version.  App upgrades are typically straight forward and go without issues, but upgrades between major Nextcloud releases sometimes does not go as smoothly as hoped.  Thus prior to any changes of the production level setup the modifications have to be first checked on an identical test setup.
 
 ## Nextcloud vs ownCloud
 
