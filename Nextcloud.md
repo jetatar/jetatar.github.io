@@ -129,7 +129,11 @@ Select an administrator username and password. Then click on “Storage & Databa
 
 ## Configuring Single-Sign-On 
 
-The "SSO & SAML" app has to be enabled.  The app is part of the Nextcloud install package, but is disabled by default.  To enable the app go to your Nextcloud Apps page. It can then be found in Nextcloud's “SSO & SAML authentication” section.
+The "SSO & SAML" app has to be enabled.  The app is part of the Nextcloud install package, but is disabled by default.  To enable the app go to your Nextcloud Apps page. It can then be found in Nextcloud's “SSO & SAML authentication” section.  The form needs to be filled out as follows.  In the field highlighted in blue, the SLO URL, you can use: 
+https://shib.service.uci.edu/idp/profile/Logout?return_url=http://www.yoursite.com where the return_url points to where ever you want the user to end up after logging out.
+
+![](https://github.com/jetatar/Docs/blob/master/NextCloud_Shibboleth_Config.png?raw=true)
+
 
 ## References
 https://www.marksei.com/install-nextcloud-13-centos-7/
