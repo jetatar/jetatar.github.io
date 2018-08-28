@@ -134,10 +134,15 @@ https://shib.service.uci.edu/idp/profile/Logout?return_url=http://www.yoursite.c
 
 ![](https://github.com/jetatar/Docs/blob/master/NextCloud_Shibboleth_Config.png?raw=true)
 
+Everyone with an UCI username and password should now be able to authenticate and login!
 
 ## References
 https://www.marksei.com/install-nextcloud-13-centos-7/
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-owncloud-on-centos-7
+
 https://docs.nextcloud.com/server/12/admin_manual/configuration_server/sso_configuration.html?highlight=ldap
+
 https://apps.nextcloud.com/apps/user_saml
+
 https://www.oit.uci.edu/idm/shibboleth/
