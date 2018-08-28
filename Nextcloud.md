@@ -134,7 +134,14 @@ https://shib.service.uci.edu/idp/profile/Logout?return_url=http://www.yoursite.c
 
 ![](https://github.com/jetatar/Docs/blob/master/NextCloud_Shibboleth_Config.png?raw=true)
 
-Everyone with an UCI username and password should now be able to authenticate and login!
+Everyone with an UCI username and password should now be able to authenticate and use Nextcloud!
+
+## Nextcloud vs ownCloud
+
+Nextcloud is based on ownCloud.  At the time or writing, the latest versions, Nextcloud v13 and ownCloud v10, are very similar in terms of prerequisits, installation process, code base, apps and modules, as well as the user interface.  One major difference is that ownCloud has an Enterprise (paid) edition that has the SSO app.  The standard ownCloud edition does not include the SSO module.  Nextcloud has one code base, all open source.  After installing ownCloud's Enterprise edition, a considerable amount of time was spent with the ownCloud developers to debug the Shibboleth backend application.  The setup is unnecessarily complex as described here: https://doc.owncloud.org/server/10.0/admin_manual/enterprise/user_management/user_auth_shibboleth.html
+
+Support was not very responsive and the cost of ownCloud's Enterprise edition is based on the number of users.  For the expected number of UCI users, the cost for the Enterprise edition and support is relatively high.
+
 
 ## References
 https://www.marksei.com/install-nextcloud-13-centos-7/
