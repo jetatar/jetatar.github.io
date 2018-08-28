@@ -136,6 +136,35 @@ https://shib.service.uci.edu/idp/profile/Logout?return_url=http://www.yoursite.c
 
 Everyone with an UCI username and password should now be able to authenticate and use Nextcloud!
 
+## Testing Nextcloud Plugins
+
+A number of potentially useful Nextcloud apps were tested, including:
+		○ File Access Control
+		○ Group Folders
+		○ Files Clipboard
+		○ Quota Warning
+		○ Ransomware protection
+		○ W2G2 - allows users to lock files and folders
+		○ User usage report
+		○ Circles
+		○ Impersonate
+		○ Retention
+		○ Full Text Search - ElastiSearch Platform
+		○ Ownbackup
+		○ Snapshots
+
+	- Nextcloud apps
+		○ No official Duo App
+		○ Configured using FreeOTP
+	- New version of Nextcloud is out 13.0.0 (currently running 12.x)
+	- Updated Nextcloud Shibboleth module to 1.4.2 - no problem.
+	- Owncloud has a Duo app
+	- Installed a number of Nextcloud plugins:
+	- Updated to Nextcloud 13.
+		○ That automatically disabled the Dual Authentication app since it is not stable with the latest Nextcloud version.
+
+
+
 ## Nextcloud vs ownCloud
 
 Nextcloud is based on ownCloud.  At the time or writing, the latest versions, Nextcloud v13 and ownCloud v10, are very similar in terms of prerequisits, installation process, code base, apps and modules, as well as the user interface.  One major difference is that ownCloud has an Enterprise (paid) edition that has the SSO app.  The standard ownCloud edition does not include the SSO module.  Nextcloud has one code base, all open source.  After installing ownCloud's Enterprise edition, a considerable amount of time was spent with the ownCloud developers to debug the Shibboleth backend application.  The setup is unnecessarily complex as described here: https://doc.owncloud.org/server/10.0/admin_manual/enterprise/user_management/user_auth_shibboleth.html
